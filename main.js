@@ -13,6 +13,8 @@ const fetchNews = async (query) => {
     let url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`;
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
+    
     arrData = data.articles;
     localStorage.setItem("data", JSON.stringify(data.articles));
   } else {
