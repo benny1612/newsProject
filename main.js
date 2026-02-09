@@ -10,7 +10,8 @@ const fetchNews = async (query) => {
   main.innerHTML = "";
 
   if (!localStorage.getItem("data")) {
-    let url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`;
+    // let url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`;
+    let url = `/api/news`;
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
